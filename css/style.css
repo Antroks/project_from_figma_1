@@ -6,6 +6,11 @@ html {
     box-sizing: inherit;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -476,9 +481,11 @@ body {
 
 .card {
     padding-top: 25px;
+    max-width: 1150px;
+    margin: 0 auto;
 }
 
-.card__grid {
+/* .card__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
@@ -498,16 +505,20 @@ body {
     width: 100%;
 }
 
-.card__grid-item img:hover {
+.card__grid-item img:hover { */
 
+/* } */
+
+.card__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    
+    
+  
 }
 
-.card__flex {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.card__flex-item {
+.card__grid-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -517,12 +528,19 @@ body {
     background-size: cover;
     position: relative;
   }
-  .card-view-icon {
+
+  .card__grid-bg {
+    background-image: url(../img/Card2.png);
+  }
+
+
+
+  .card__grid-item .card-view-icon {
     z-index: 2;
     opacity: 0;
     transition: 0.5s ease;
   }
-  .card-filter {
+  .card__grid-item .card-filter {
     position: absolute;
     background-color: #34547A;
     opacity: 0;
@@ -534,9 +552,44 @@ body {
     opacity: 0;
     transition: 0.5s ease;
   }
-  .card:hover .card-view-icon {
+  .card__grid-item .card:hover .card-view-icon {
     opacity: 1;
   }
-  .card:hover .card-filter {
+  .card__grid-item .card:hover .card-filter {
+    opacity: .8;
+  }
+
+
+
+.porfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 0;
+}
+
+  /* Gallery*/
+
+  .materialboxed {
+    display: block;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
+    position: relative;
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  .materialboxed:hover:not(.active) {
     opacity: 0.8;
+  }
+  
+  .materialboxed.active {
+    cursor: -webkit-zoom-out;
+    cursor: zoom-out;
+  }
+
+  .carousel.scrolling .carousel-item .materialboxed,
+  .carousel .carousel-item:not(.active) .materialboxed {
+    pointer-events: none;
   }
