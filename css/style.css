@@ -225,7 +225,7 @@ body {
 
 .about {
     padding-top: 91px;
-    padding-bottom: 93px;
+    padding-bottom: 97px;
 }
 .about__item {
     text-align: center;
@@ -242,7 +242,7 @@ body {
 .project {
     background-color: #34547A;
     padding-top: 100px;
-    padding-bottom: 96px;
+    padding-bottom: 99px;
 
 
     
@@ -480,97 +480,65 @@ body {
 
 
 .card {
-    padding-top: 25px;
-    max-width: 1150px;
-    margin: 0 auto;
+    padding-top: 24px;
+
 }
-
-/* .card__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    gap: 0;
-    
-}
-
-
-.card__grid-item {
-    margin: 0;
-    padding: 0;
-    height: 480px;
-}
-
-.card__grid-item img {
-    height: auto;
-    width: 100%;
-}
-
-.card__grid-item img:hover { */
-
-/* } */
 
 .card__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    
-    
-  
-}
-
-.card__grid-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 480px;
-    height: 480px;
-    background-image: url(../img/card.png);
-    background-size: cover;
-    position: relative;
-  }
-
-  .card__grid-bg {
-    background-image: url(../img/Card2.png);
-  }
-
-
-
-  .card__grid-item .card-view-icon {
-    z-index: 2;
-    opacity: 0;
-    transition: 0.5s ease;
-  }
-  .card__grid-item .card-filter {
-    position: absolute;
-    background-color: #34547A;
-    opacity: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    opacity: 0;
-    transition: 0.5s ease;
-  }
-  .card__grid-item .card:hover .card-view-icon {
-    opacity: 1;
-  }
-  .card__grid-item .card:hover .card-filter {
-    opacity: .8;
-  }
-
-
-
-.porfolio__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
     gap: 0;
 }
 
+.card__grid-item {
+    position: relative;
+    /* width: 480px;
+    height: 480px; */
+}
+
+
+.card-filter {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-color: #34547A;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    opacity: .8;
+    transition: 0.5s ease;
+    
+}
+
+.card__filter .card-view-icon {
+    z-index: 2;
+    opacity: 1;
+    transition: 0.5s ease;
+  } 
+.card__grid-item:hover .card-filter {
+    display: flex;
+    transition: 0.5s ease;
+  }  
+
+.card__grid-item.active .card-filter {
+    display: none;
+}
+
+  .block__bg {
+    background-color: blue;
+    height: 300px;
+    width: 400px;
+  } 
+
+  
+
   /* Gallery*/
 
-  .materialboxed {
+ .materialboxed {
     display: block;
     cursor: -webkit-zoom-in;
     cursor: zoom-in;
@@ -592,4 +560,4 @@ body {
   .carousel.scrolling .carousel-item .materialboxed,
   .carousel .carousel-item:not(.active) .materialboxed {
     pointer-events: none;
-  }
+  } 
