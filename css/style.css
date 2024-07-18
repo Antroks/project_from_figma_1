@@ -421,7 +421,7 @@ body {
 
 
 
-  .video {
+.video {
     background-color: var(--bg-color);
     padding-top: 73px;
     padding-bottom: 100px;
@@ -431,7 +431,7 @@ body {
   .video .text-h2 {
     margin-bottom: 41px;
 }
-    .video .text-p {
+.video .text-p {
     margin: 0 auto;
     margin-bottom: 49px;
     
@@ -473,6 +473,15 @@ body {
         margin-bottom: 20px;
     } 
 
+}
+
+
+@media screen and (max-width: 380px) {
+    
+    video {
+        width: 100%;
+        height: auto;
+    }
 }
 
 
@@ -545,23 +554,31 @@ body {
 
 }
 
+
+
+
 @media screen and (max-width: 768px) {
     .card__grid {
         grid-template-columns: repeat(1, 1fr);
     }    
 }
 
-@media screen and (max-width: 576px) {
-    video {
-        width: 530px;
-        height: 300px;
+
+@media screen and (max-width: 380px) {
+    
+    .card__grid-item {
+        height: 380px;
+        width: 380px;
+        margin: 0 auto;
     }
 
-    .video .text-p {
-        margin-bottom: 20px;
-    } 
-
 }
+
+
+
+
+
+
 
   /* Gallery*/
 
@@ -588,3 +605,123 @@ body {
   .carousel .carousel-item:not(.active) .materialboxed {
     pointer-events: none;
   } 
+
+
+.clients {
+    padding-top: 73px; 
+    padding-bottom: 100px;
+}
+.clients__flex {
+    display: flex;
+    justify-content: space-between;
+}
+.clients__flex-item {
+}
+
+
+@media screen and (max-width: 768px) {
+    .clients__flex {
+        /* flex-wrap: wrap;*/
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+
+.form {
+    background-color: var(--bg-color);
+    padding: 70px 0;
+}
+.form__title {
+    text-align: center;
+    
+}
+.form .text-h2 {
+    margin-bottom: 40px;
+}
+.form .text-p {
+    margin: 0 auto;
+    margin-bottom: 60px;
+   
+}
+
+.form__item {
+    max-width: 540px;
+    margin: 0 auto;
+    color: var(--label-color);
+    margin-bottom: 47px;
+    
+}
+
+input {
+    padding: 17px 20px 18px 20px;
+    width: 255px;
+    height: 50px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+input:first-child {
+    margin-right: 26px;
+}
+
+input::placeholder {
+
+    font-size: 14px;
+    line-height: 164.1%;
+}
+
+textarea {
+    font-size: 14px;
+    border: none;
+    padding: 17px 20px;
+    width: 100%;
+    height: 175px;
+}
+
+.form .btn {
+    margin: 0 auto;
+    text-align: center;
+    padding: 18px 41px;
+    max-width: 192px;
+    letter-spacing: 15%;
+    font-size: 14px;
+}
+
+
+
+@media screen and (max-width: 576px) {
+    input {
+        width: 100%;
+        
+    }
+
+
+}
+
+@media screen and (max-width: 380px) {
+    
+    .form__item {
+        
+        text-align: center;
+    }
+
+    input:first-child {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+
+    input {
+        width: 90%;
+        
+        
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    
+}
+
